@@ -75,9 +75,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox=
                         name="lines"
                         class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                       >
-                        <option>United States</option>
-                        <option>Canada</option>
-                        <option>Mexico</option>
+
                       </select>
                     </div>
                   </div>
@@ -94,9 +92,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox=
                         autocomplete="template-name"
                         class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                       >
-                        <option>United States</option>
-                        <option>Canada</option>
-                        <option>Mexico</option>
+
                       </select>
                     </div>
                   </div>
@@ -167,35 +163,40 @@ background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox=
     </main>
 
     <script>
-      
-      document.addEventListener('DOMContentLoaded',async ()=>{
+       // Function to fetch data from an API
+        async function fetchData(apiUrl) {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error("Error fetching data: ", error);
+            }
+        }
 
-        const lines = document.getElementById("lines");
-        const templates = document.getElementById("template");
-        await fillList(lines, "phones.json");
-        await fillList(templates, "templates.json");
+        // Function to populate a select element with options
+        function populateSelect(selectId, data, optionKey, optionValue) {
+            const select = document.getElementById(selectId);
+            data.forEach(item => {
+                const option = document.createElement("option");
+                option.value = item[optionKey];
+                option.text = item[optionValue];
+                select.appendChild(option);
+            });
+        }
 
+        // API URLs
+        const templateApiUrl = "templates.json";
+        const linesApiUrl = "phones.json";
 
-      })
+        // Fetch data and populate select elements when the page loads
+        window.addEventListener("load", async () => {
+            const templateData = await fetchData(templateApiUrl);
+            const linesData = await fetchData(linesApiUrl);
 
-      async function  fillList(DOMElement, urlAPI){
-
-        const data = await fetchData(urlAPI);
-
-        data.forEach(info => {
-          
+            populateSelect("template", templateData, "id_plantilla", "nombre_plantilla");
+            populateSelect("lines", linesData, "whatsapp_phone_number", "nombre_whatsapp");
         });
-
-        console.log(data);
-      }
-
-
-      async function fetchData(url){
-        const response = await fetch(url);
-        const data = await response.json();
-        return data;
-      }
-
     </script>
 
 
