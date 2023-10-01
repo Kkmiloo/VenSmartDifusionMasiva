@@ -1,0 +1,650 @@
+[
+  {
+    "id_plantilla": "64bfef83a4b54b11f4200d6f",
+    "nombre_plantilla": "estado_de_compra_1",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "TEXT",
+          "text": "Nos comunicamos del \u00e1rea de servicio al cliente de Malva"
+        },
+        "body": "Hola {{1}}\nLe contactamos porque estamos haciendo seguimiento a la compra realizada en nuestra p\u00e1gina con numero de pedido  {{2}} . Por favor responder este mensaje para que uno de nuestros asesores pueda brindarle m\u00e1s informaci\u00f3n y una atenci\u00f3n personalizada. Quedamos atentos a su respuesta"
+      }
+    ],
+    "botones": "",
+    "parametros": 2
+  },
+  {
+    "id_plantilla": "6453da39d4f061f527573ca0",
+    "nombre_plantilla": "carrito_abandonado",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "body": "\u00a1Buen d\u00eda! Le contactamos de *MALVA*. Le escribimos porque ha intentado realizar una compra a trav\u00e9s de nuestra p\u00e1gina web y no se pudo concretar, \u00bfQu\u00e9 inconvenientes present\u00f3?, con gusto le apoyamos con el proceso de compra. \u00a1Brindaremos el mejor servicio una vez se responda este mensaje!"
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64e67bb90de9e3151bfe1dad",
+    "nombre_plantilla": "prueba1_",
+    "cuenta": "649d7de5cfd86a4f81eaae55",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "Prueba pagina Invicta"
+      }
+    ],
+    "botones": "Ir a la pagina",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b838d1fcf1d70b767",
+    "nombre_plantilla": "festina_envios_gratis",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "\u26a1*\u00a1CYBER OFERTA!*\u26a1 Relojes FESTINA desde S/299 m\u00e1s env\u00edo gratis! Compra aqu\u00ed https://festina.com.pe/collections/relojes-festina-en-oferta-especial-para-hombre-y-mujer Distribuidores oficiales\u2705 Aplica TyC. V\u00e1lido en referencias seleccionadas."
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64baceda8b29997bde6ade0b",
+    "nombre_plantilla": "campa_venta_1",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "TEXT",
+          "text": "MALVA TE SALUDA"
+        },
+        "body": "Hola  {{1}} , Te queremos enviar el catalogo de nuestra nueva colecci\u00f3n"
+      }
+    ],
+    "botones": "Contactar Asesor",
+    "parametros": 1
+  },
+  {
+    "id_plantilla": "64591e3b0f90ce1c05e92e94",
+    "nombre_plantilla": "nos_dejaste_tus_datos",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "body": "\u00a1Hola! Nos dejaste tus datos porque est\u00e1s interesado en nuestros productos INVICTA \u00danicos Distribuidores Oficiales en Venezuela \ud83c\uddfb\ud83c\uddea. Responde a este mensaje para brindarte toda la informaci\u00f3n y poder asesorarte."
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b838d1fcf1d70b757",
+    "nombre_plantilla": "carritos_abandonados",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "body": "\u00a1Hola! Nos comunicamos de *INVICTA* \u00danicos Distribuidores Oficiales en Venezuela \ud83c\uddfb\ud83c\uddea para nosotros es un gusto tener el placer de atenderte. Te estamos contactando porque intentaste realizar una compra a trav\u00e9s de nuestra p\u00e1gina web y no lograste finalizar, te escribimos para preguntarte *\u00bfQu\u00e9 inconvenientes tuviste con tu compra?*. Con gusto te apoyamos con tu proceso de compra.*\u00a1Responde este mensaje para darte toda la informaci\u00f3n y poderte asesorar!*."
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b838d1fcf1d70b773",
+    "nombre_plantilla": "bolso_obsequio",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "En *Festina* queremos que el tiempo que pasas con tu pareja sea perfecto \ud83e\udd70\u2764\ufe0f\u2728 y qu\u00e9 mejor manera de hacerlo que compartiendo juntos nuestra super promo de San Valent\u00edn \ud83d\ude2e\ud83d\ude4a\ud83c\udf81 Por este mes adquiere un reloj desde S/599 y recibe *GRATIS* un bolso de *obsequio*. Recibe en 24 horas *Aplican t\u00e9rminos y condiciones. Encuentra todos nuestros dise\u00f1os en \ud83d\udc49\ud83c\udffc https://festina.com.pe/ Recibe la mejor asesor\u00eda por medio de nuestro chat. Responde este mensaje y ser\u00e1s asignado con un experto para que conozcas los *beneficios* de comprar por *Whatsapp* \ud83d\ude4b\ud83c\udffb\u200d\u2642\ufe0f"
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b838d1fcf1d70b761",
+    "nombre_plantilla": "tiempo_con_pareja",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "body": "En *Festina* queremos que el tiempo que pasas con tu pareja sea perfecto \ud83e\udd70\u2764\ufe0f\u2728 y qu\u00e9 mejor manera de hacerlo que compartiendo juntos nuestra super promo de San Valent\u00edn \ud83d\ude2e\ud83d\ude4a\ud83c\udf81 Por este mes adquiere relojes en pareja. Recibe en 24 horas *Aplican t\u00e9rminos y condiciones. Encuentra todos nuestros dise\u00f1os en \ud83d\udc49\ud83c\udffc https://festina.com.pe/ Recibe la mejor asesor\u00eda por medio de nuestro chat. Responde este mensaje y ser\u00e1s asignado con un experto \ud83d\ude4b\ud83c\udffb\u200d\u2642\ufe0f"
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b0f90ce1c05e92ea3",
+    "nombre_plantilla": "fest_peru_noved_momento_entrega",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "body": "\ud83d\udc4b \u00a1Hola! *Nos comunicamos del \u00e1rea de log\u00edstica \ud83d\ude9a de \u231aFESTINA PERU,* te contactamos por que tu pedido presenta novedad al momento realizar la entrega.\ud83d\ude41\n\nResponde este mensaje \ud83d\udce5 *para poder validar la informaci\u00f3n y entregar tu pedido,* quedamos atentos a tu respuesta."
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64bad6938813119014bd8d63",
+    "nombre_plantilla": "seguimiento_a_cliente_1",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "body": "!Hola! Le escribimos de MALVA. Estamos felices de que sea parte de nuestros clientes VIP. Nos encantar\u00eda saber sobre su experiencia y deseamos conocer su opini\u00f3n sobre la compra realizada. Responda por favor a este mensaje y d\u00e9jenos conocer su opini\u00f3n, de esta forma nos ayudar\u00eda a mejorar nuestro servicio."
+      }
+    ],
+    "botones": "Contactar Asesor",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b0f90ce1c05e92ea0",
+    "nombre_plantilla": "queremos_darte_lo_mejor_299",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "Queremos darte *lo mejor* \u2728\ud83d\ude0e Por eso del *14 al 24* de abril, compra nuestras mejores relojes *FESTINA* desde *S/ 299* \ud83e\udd29\ud83e\udd2f Comunicate y disfruta de nuestro *CYBER DAYS* \ud83d\udd25 Aplican TyC.\nResponde este mensaje para ser atendido por un experto \ud83d\ude4b\ud83c\udffb\u200d\u2640\ufe0f\nMira todas nuestras colecciones en: https://festina.com.pe/ \ud83d\uded2"
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b0f90ce1c05e92ea9",
+    "nombre_plantilla": "invicta_coleccion_mas_esperada",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "A *INVICTA* a llegado la colecci\u00f3n m\u00e1s esperada del a\u00f1o \ud83e\udd29 Del *2 al 31* de mayo, compra nuestras incre\u00edbles referencias *PRO DIVER* \u231a\ud83d\udd25 Desde *$60 USD* \ud83e\udd2f Compra Ahora y paga en la puerta de tu Casa \u2728 Aplican TyC\nResponde este mensaje para que uno de nuestros asesores expertos responda todas tus dudas e inquietudes \u2705"
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "6453ec49f4ab9c28b3df04ea",
+    "nombre_plantilla": "ventas_2",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "body": "\u00a1Buen d\u00eda! Le contactamos de *MALVA*. Nos ha dejado los datos de contacto porque est\u00e1 interesado en nuestros productos. \u00a1Brindaremos el mejor servicio una vez se responda este mensaje!"
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b0f90ce1c05e92ea1",
+    "nombre_plantilla": "dia_de_la_madre",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "\"Dale el mejor d\u00eda a *MAM\u00c1*  con *INVICTA y TECHNOMARINE* \ud83d\udc9b\ud83d\udc69\ud83c\udffb\u200d\ud83d\udc99 Del *2 al 15* de Mayo, encuentra el regalo *PERFECTO* Para ella, desde *$70 USD* \ud83e\udd29 y paga en la puerta de tu casa \ud83d\udd25 Comun\u00edcate *AHORA* y sorprende a Mam\u00e1 con sus *FAVORITOS* \u231a\ud83e\udd70 Aplican TyC\nResponde este mensaje y uno de nuestros asesores atender\u00e1 todas tus dudas e inquietudes \u2705\""
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "650c4ca4ec4884912dcf868e",
+    "nombre_plantilla": "aniversario_invicta_mexico_21_09_2023",
+    "cuenta": "649d7de5cfd86a4f81eaae55",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "*\u00a1Explora nuestros 500 relojes con descuentos especiales en Invicta M\u00e9xico!* \ud83d\udd70\ufe0f Este septiembre, hemos reducido nuestros precios en un 20%. No dejes pasar esta oportunidad \u00fanica. \u00a1Haz tu compra hoy mismo y presume un reloj que marca la diferencia! \u231a\ud83c\udf89"
+      }
+    ],
+    "botones": "Ver Catalogo",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b0f90ce1c05e92ea5",
+    "nombre_plantilla": "oferta_increibles",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "Tenemos algo *sorprendente para ti* \ud83e\udd29\nEncuentra los mejores dise\u00f1os desde *$60 USD*  y se la envidia de tus amig@s\nConoce nuestras nuevas colecciones y los *beneficios* de comprar por Whatsapp \n\ud83d\ude4b\ud83c\udffb\u200d\u2642\ufe0f \u00a1Un experto espera para ayudarte en todo tu proceso de compra! Responde a este mensaje y recibe la mejor asesor\u00eda para que conozcas nuestros productos."
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b838d1fcf1d70b765",
+    "nombre_plantilla": "estamos_de_aniversario_2",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "*\u00a1\u00a1En Festina, estamos de Aniversario!!* \ud83e\udd73y qu\u00e9 mejor manera de compartir nuestra felicidad, que haci\u00e9ndote feliz. \u263a\ufe0fEncuentra nuestras incre\u00edbles colecciones desde  * S/ 399 + Env\u00edo Gratis* \ud83e\udd2f\ud83d\udd25 no dejes pasar esta gran oportunidad, haz parte de *#TeamFestina* \ud83e\udd29 Aplican t\u00e9rminos, condiciones y restricciones. Mira todas nuestras colecciones en: https://festina.com.pe/\ud83d\uded2 y responde este mensaje para ser atendido por un asesor y brindarte m\u00e1s informaci\u00f3n \ud83d\ude4b"
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "650e0ecee15ece4e3385c15c",
+    "nombre_plantilla": "invicta_mexico_novedades_22_09_2023",
+    "cuenta": "649d7de5cfd86a4f81eaae55",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "*\u00c9chale un ojo a los nuevos modelos de Invicta.* Relojes autom\u00e1ticos, cron\u00f3grafos y cl\u00e1sicos en acero dorado, ideales para cualquier ocasi\u00f3n. \u00bfQu\u00e9 est\u00e1s esperando para conseguir el tuyo? Comprar ahora!\""
+      }
+    ],
+    "botones": "Comprar Ahora",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64bad3d18b29997bde6afb4b",
+    "nombre_plantilla": "conversacion_expirada",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "TEXT",
+          "text": "MALVA"
+        },
+        "body": "!Lamento no haberle podido responder anteriormente  a sus preguntas, pero me alegra poder ayudarle ahora. Si desea continuar esta conversaci\u00f3n estamos atentos para brindarte el mejor servicio.!"
+      }
+    ],
+    "botones": "Contactar Asesor",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b0f90ce1c05e92eaf",
+    "nombre_plantilla": "te_escribimos_de_festina_peru",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "TEXT",
+          "text": "\u00a1Hola!"
+        },
+        "body": "\ud83d\udc4b Te escribimos de *FESTINA* Distribuidores Oficiales en *PER\u00da* \ud83c\uddf5\ud83c\uddea Estamos felices de que seas parte de nuestro *BEST TEAM*. Nos encantar\u00eda saber sobre tu experiencia y deseamos conocer tu opini\u00f3n sobre la compra que realizaste.\ud83d\udecd\ufe0f Responde a este mensaje y d\u00e9janos conocer tu opini\u00f3n, nos ayudar\u00eda a mejorar nuestro servicio."
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b0f90ce1c05e92ead",
+    "nombre_plantilla": "oferta_especial_35",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "En *FESTINA*  queremos darte lo mejor \ud83d\udc9c por eso tenemos nuestra gran *Oferta especial* \u2728 Comun\u00edcate *AHORA* y encuentra en nuestro cat\u00e1logo, relojes con hasta el *30% de descuento* \ud83e\udd2f Disfruta nuestros *CYBER FAYS* Invicta con toda \ud83d\ude0e Aplican TyC.\nResponde este mensaje para ser atendido por un asesor \ud83d\ude4b\ud83c\udffb\u200d\u2640\ufe0f\nMira nuestras m\u00e1s incre\u00edbles colecciones en: https://festina.com.pe/ \u2705\u231a"
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b838d1fcf1d70b763",
+    "nombre_plantilla": "festi_peru_encontrabas_en_tu_domicilio",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "body": "\ud83d\udc4b\u00a1Hola! *Nos comunicamos del \u00e1rea de log\u00edstica \ud83d\ude9a de \u231aFESTINA PERU,* te contactamos por que tu pedido {{1}} presenta novedad ya que no te encontrabas en tu domicilio para hacer la entrega efectiva.\ud83d\ude41\n\nResponde este mensaje \ud83d\udce5 *para programar d\u00eda y horario estas disponible y lograr entregar tu pedido,* quedamos atentos a tu respuesta."
+      }
+    ],
+    "botones": "",
+    "parametros": 1
+  },
+  {
+    "id_plantilla": "64b8407f16a7daad71d1cb16",
+    "nombre_plantilla": "ventas_1",
+    "cuenta": "649d7de5cfd86a4f81eaae55",
+    "componentes": [
+      {
+        "body": "\u00a1Buen d\u00eda! Le contactamos de *MALVA*. Le escribimos porque ha llamado a nuestra l\u00ednea de atenci\u00f3n para solicitar informaci\u00f3n de nuestros productos. \u00a1brindaremos el mejor servicio una vez se responda este mensaje!"
+      }
+    ],
+    "botones": "Contactar Asesor",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "6453ec16f4ab9c28b3df035f",
+    "nombre_plantilla": "ventas_1",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "body": "\u00a1Buen d\u00eda! Le contactamos de *MALVA*. Le escribimos porque ha llamado a nuestra l\u00ednea de atenci\u00f3n para solicitar informaci\u00f3n de nuestros productos. \u00a1Brindaremos el mejor servicio una vez se responda este mensaje!"
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64f256bae467ed9340e7bc1b",
+    "nombre_plantilla": "disculpasmexico_reloj_conme",
+    "cuenta": "649d7de5cfd86a4f81eaae55",
+    "componentes": [
+      {
+        "header": {
+          "type": "TEXT",
+          "text": "\"Estimado cliente de Invicta M\u00e9xico"
+        },
+        "body": "Esperamos que est\u00e9s bien. Nos ponemos en contacto contigo para disculparnos sinceramente por el retraso en la entrega de tu esperado reloj \ud83c\uddf2\ud83c\uddfdInvicta Conmemoraci\u00f3n M\u00e9xico 2023\ud83c\uddf2\ud83c\uddfd. Queremos que sepas que estamos haciendo todo lo posible para resolver esta situaci\u00f3n y garantizar que tu reloj se despache el pr\u00f3ximo lunes.\n\nGracias por confiar en Invicta M\u00e9xico. Estamos aqu\u00ed para servirte y garantizar que recibas el producto de alta calidad que esperas. Si tienes alguna pregunta o inquietud no dudes en respondernos este mensaje."
+      }
+    ],
+    "botones": "Contactar Asessor",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64ff19fb8dc51e5c71b04246",
+    "nombre_plantilla": "mensaje_expirada_",
+    "cuenta": "64b6e7d66fd6555a1d00d0f9",
+    "componentes": [
+      {
+        "body": "Bienvenido a Kreditime, lamentamos no haberte podido responder anteriormente a tus preguntas debido a que estamos fuera del horario de atenci\u00f3n, pero me alegra poder ayudarte ahora. Si desea continuar esta conversaci\u00f3n estamos atentos para brindarte el mejor servicio."
+      }
+    ],
+    "botones": "Iniciar Conversaci\u00f3n",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b838d1fcf1d70b750",
+    "nombre_plantilla": "estamos_de_aniversario_1",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "*\u00a1\u00a1ESTAMOS DE ANIVERSARIO!!* \ud83e\udd73 En *Festina* queremos celebrar nuestro *cumplea\u00f1os 121* contigo y qu\u00e9 mejor manera de hacerlo que dandote una *super promo*!! \ud83e\udd29 Lleva hasta el *30% de descuento* en nuestras m\u00e1s incre\u00edbles colecciones *+ Env\u00edo Gratis*, \ud83e\udd2f\ud83d\udd25 \u00a1Comun\u00edcate *YA*! con nosotros y ent\u00e9rate de m\u00e1s descuentos y promociones que tenemos para ti.\u2728 Aplican t\u00e9rminos, condiciones y restricciones. Mira todas nuestras colecciones en: https://festina.com.pe/ \ud83d\uded2 y responde este mensaje para ser atendido por un asesor y brindarte m\u00e1s informaci\u00f3n \ud83d\ude4b"
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b0f90ce1c05e92ea7",
+    "nombre_plantilla": "fest_peru_seguir_hablando",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "body": "\ud83d\udc4b \u00a1Hola! *Nos comunicamos de \u231aFESTINA PERU,* queremos seguir hablando contigo y darte mayor informacion sobre nuestros productos.\n\nResponde este mensaje \ud83d\udce5 para poder *validar la informaci\u00f3n* quedamos atentos a tu respuesta."
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b838d1fcf1d70b758",
+    "nombre_plantilla": "falta_1_dia",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "*\u00a1FALTA 1 D\u00cdA! * \u00bfY a\u00fan no sabes que dar de regalo? \u00a1No te preocupes! En *Invicta* no dejaremos que pasen las fechas especiales sin recordarles a todas las *mujeres* lo maravillosas que son \u2728 Por eso, tenemos para ti, excelentes *Promociones* en colecciones *Exclusivas* a precios *Incre\u00edbles* Mira todas nuestras colecciones en https://invictavenezuela.com/ \u2705 y responde este mensaje para ser atendido por un asesor Aplican t\u00e9rminos, condiciones y restricciones"
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b838d1fcf1d70b752",
+    "nombre_plantilla": "festi_peru_noveda_entrega",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "body": "\ud83d\udc4b\u00a1Hola! *Nos comunicamos del \u00e1rea de log\u00edstica \ud83d\ude9a de \u231aFESTINA PERU*, te contactamos por que tu pedido {{1}} presenta novedad en la entrega por no cancelar el producto.\ud83d\ude41\n\nResponde este mensaje \ud83d\udce5 para confirmar *que novedad presentaste al momento de realizar el pago y lograr entregar tu pedido,* quedamos atentos a tu respuesta."
+      }
+    ],
+    "botones": "",
+    "parametros": 1
+  },
+  {
+    "id_plantilla": "6453ec63a63525b7e98ccb1a",
+    "nombre_plantilla": "sac_1",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "body": "\u00a1Buen d\u00eda! Le contactamos de *MALVA*. Le escribimos porque realiz\u00f3 una compra con nosotros y la transportadora nos informa una novedad, solucionaremos el caso una vez responda este mensaje y le brindaremos el mejor servicio."
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64b840ec16a7daad71d1cdd1",
+    "nombre_plantilla": "novedad1",
+    "cuenta": "649d7de5cfd86a4f81eaae55",
+    "componentes": [
+      {
+        "body": "\u00a1Buen d\u00eda! Le contactamos de *MALVA*. Le escribimos porque realiz\u00f3 una compra con nosotros y la transportadora nos informa una novedad, solucionaremos el caso una vez responda este mensaje y brindarle el mejor servicio."
+      }
+    ],
+    "botones": "Contactar Asesor",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "650da23213d1d38b836394e7",
+    "nombre_plantilla": "invicta_mexico_reloj_mexicano",
+    "cuenta": "649d7de5cfd86a4f81eaae55",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "Invicta x Orgullo Mexicano. *\u00bfConoces ya nuestro reloj autom\u00e1tico de edici\u00f3n especial \"M\u00e9xico\"?* Adqui\u00e9ralo ahora y celebremos juntos nuestro orgullo mexicano. \u00a1Compra el tuyo y lleva nuestra esencia mexicana en cada momento! \ud83c\uddf2\ud83c\uddfd\u231a\ud83c\udf89"
+      }
+    ],
+    "botones": "Quiero Comprar",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b0f90ce1c05e92e9d",
+    "nombre_plantilla": "diseos_exclusivos",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "En *Festina* queremos que el tiempo que pasas con tu pareja sea perfecto \ud83e\udd70\u2764\ufe0f\u2728 y qu\u00e9 mejor manera de hacerlo que compartiendo juntos nuestra super promo de San Valent\u00edn \ud83d\ude2e\ud83d\ude4a\ud83c\udf81 Encuentra nuestros *exclusivos* dise\u00f1os desde *S/349* y no dejes de sorprender a tu persona especial \u2764\ufe0f Recibe en 24 horas. *Aplican t\u00e9rminos y condiciones Encuentra todos nuestros dise\u00f1os en \ud83d\udc49\ud83c\udffc https://festina.com.pe/ Recibe la mejor asesor\u00eda por medio de nuestro chat. Responde este mensaje y ser\u00e1s asignado con un experto para que conozcas los *beneficios* de comprar por *Whatsapp* \ud83d\ude4b\ud83c\udffb\u200d\u2642\ufe0f"
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b838d1fcf1d70b75c",
+    "nombre_plantilla": "regalo_perfecto_festina_mujer",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "\ud83d\udea8 *\u00a1LLEG\u00d3 EL REGALO PERFECTO A  FESTINA!* \ud83d\udea8 Solo por este mes compra un reloj de *Mujer*  \ud83d\udc69\ud83c\udffb\u200d\ud83e\uddb1 y ll\u00e9vate totalmente *Gratis un Bolso + Joyero*  \u2728 \u00a1\u00bfQu\u00e9, qu\u00e9?! \ud83e\udd2f Comun\u00edcate *AHORA* y no dejes pasar esta gran *Promoci\u00f3n* \ud83e\udd29 Aplican TyC. \nResponde este mensaje y uno de nuestros asesores te brindar\u00e1 toda la informaci\u00f3n.\ud83d\ude4b\ud83c\udffb\nMira todas nuestras colecciones en:  https://festina.com.pe/  \u2705"
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b0f90ce1c05e92e92",
+    "nombre_plantilla": "tu_pedido_presenta_novedad",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "body": "\ud83d\udc4b\u00a1Hola! Nos comunicamos del \u00e1rea de log\u00edstica \ud83d\ude9a de \u231aINVICTA VENEZUELA \ud83c\uddfb\ud83c\uddea , te contactamos por que tu pedido {{1}} presenta novedad en la entrega por no cancelar el producto.\ud83d\ude41 Responde este mensaje \ud83d\udce5 para confirmar que novedad presentaste al momento de realizar el pago y lograr entregar tu pedido, quedamos atentos a tu respuesta."
+      }
+    ],
+    "botones": "",
+    "parametros": 1
+  },
+  {
+    "id_plantilla": "64591e3b0f90ce1c05e92eb2",
+    "nombre_plantilla": "el_regalo_perfecto",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "En *Festina* queremos que todas las *mujeres* tengan d\u00edas maravillosos \ud83d\udda4\u2728, por eso tenemos *\u00a1El Regalo Perfecto para ellas!* \ud83d\udecd\ufe0f Por la compra de cualquier referencia de mujer lleva totalmente *gratis Joyero + Bolso* \ud83d\udc5c\ud83d\udc8e \u00a1No te pierdas esta gran *Promo* que traemos para ti! \u2705 *Regala Festina, Regala Felicidad* \u263a \ufe0f Aplican t\u00e9rminos y condiciones. Encuentra todos nuestros dise\u00f1os en \ud83d\udc49\ud83c\udffc https://festina.com.pe/ Responde este mensaje para conocer m\u00e1s informaci\u00f3n y ser atendido por experto \ud83d\ude4b\ud83c\udffb\u200d\u2642\ufe0f"
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b0f90ce1c05e92eab",
+    "nombre_plantilla": "regalo_bolso_joyero",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "Te obsequiamos un bolso y un joyero por la compra de cualquier reloj Festina \u00a1Aprovecha nuestro Aniversario y llevalo con env\u00edo gratis! Ingresa y compra aqu\u00ed https://festina.com.pe/collections/relojes-festina-para-mujer Aplica TyC. Exclusivo Online."
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b838d1fcf1d70b754",
+    "nombre_plantilla": "novedad_en_direccion_registrada",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "body": "\ud83d\udc4b \u00a1Hola! Nos comunicamos del \u00e1rea de log\u00edstica \ud83d\ude9a de \u231a VENEZUELA \ud83c\uddfb\ud83c\uddea , te contactamos por que tu pedido {{1}} presenta novedad con la direcci\u00f3n registrada.\ud83d\ude41 Responde este mensaje \ud83d\udce5 para poder validar la informaci\u00f3n y entregar tu pedido, quedamos atentos a tu respuesta."
+      }
+    ],
+    "botones": "",
+    "parametros": 1
+  },
+  {
+    "id_plantilla": "64768129dc7f5325da7cd0bd",
+    "nombre_plantilla": "prueba_kustomer",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "body": "\u23f0 Visita www.malva.com y aprovecha esta oferta exclusiva.\n\n\u00a1Gracias por ser parte de nuestra familia de clientes fieles!"
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "649d8a4dfcfe2eeba9612508",
+    "nombre_plantilla": "carritos_abandonados_mexico_junio2023",
+    "cuenta": "649d7de5cfd86a4f81eaae55",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "\ud83d\udc4b \u00a1Hola! Nos comunicamos de INVICTA \u00danicos Distribuidores Oficiales en M\u00c9XICO. \ud83c\uddf2\ud83c\uddfd .Para nosotros es un gusto atenderte. Te contactamos porque intentaste realizar una compra a trav\u00e9s de nuestra p\u00e1gina web y no lograste finalizar.\ud83d\uded2 Queremos preguntarte \u00bfQue inconvenientes tuviste con tu compra? Te podemos ayudar a finalizar tu compra con nuestros asesores especializados. \ud83d\udce5 Responde este mensaje para darte toda la informaci\u00f3n y poderte asesorar."
+      }
+    ],
+    "botones": "Contactar Asesor",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64c7d3130d5fca24e569f5e2",
+    "nombre_plantilla": "golden_goose_llega_a_malva_",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [],
+    "botones": "Contactar Asesor",
+    "parametros": 1
+  },
+  {
+    "id_plantilla": "64591e3b838d1fcf1d70b744",
+    "nombre_plantilla": "aclaramos_tus_dudas",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "body": "\u00a1Hola! Desde el \u00e1rea de Servicio al Cliente de INVICTA \u00danicos Distribuidores Oficiales en Venezuela \ud83c\uddfb\ud83c\uddea queremos ayudarte con tu solicitud por la compra realizada con n\u00famero de orden {{1}}. Por favor responde a este mensaje y aclararemos tus dudas."
+      }
+    ],
+    "botones": "",
+    "parametros": 1
+  },
+  {
+    "id_plantilla": "64591e3b838d1fcf1d70b75a",
+    "nombre_plantilla": "se_acaba_el_dia",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "header": {
+          "type": "IMAGE",
+          "attachment": "SI"
+        },
+        "body": "*\u00a1SE ACABA EL TIEMPO! * En *Festina* somos c\u00f3mplices de los mejores *Regalos* por eso, cualquier compra que hagas hoy con *NIREX* te llegar\u00e1 en solo *\u00a124 horas o menos! * No dejes pasar el d\u00eda de la *mujer, * sin demostrarles cuanto las amas \u2728 Responde este mensaje y ser\u00e1s atendido por un asesor Mira todas nuestras colecciones en https://festina.com.pe/ \u2705 Aplican t\u00e9rminos, condiciones y restricciones."
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  },
+  {
+    "id_plantilla": "64591e3b838d1fcf1d70b76f",
+    "nombre_plantilla": "nos_llamaste_linea_de_atencion",
+    "cuenta": "64480cf66f616660c4bb58a9",
+    "componentes": [
+      {
+        "body": "*\u00a1Hola!* Nos comunicamos de *INVICTA \u00danicos Distribuidores Oficiales en Venezuela \ud83c\uddfb\ud83c\uddea* para nosotros es un gusto tener el placer de atenderte. Te estamos contactando porque nos llamaste a nuestra l\u00ednea de atenci\u00f3n para solicitar informaci\u00f3n sobre nuestras referencias. *\u00a1Responde este mensaje para darte toda la informaci\u00f3n y poderte asesorar!*. Con gusto te apoyamos con tu proceso de compra."
+      }
+    ],
+    "botones": "",
+    "parametros": 0
+  }
+]
