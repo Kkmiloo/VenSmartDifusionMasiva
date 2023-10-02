@@ -163,6 +163,9 @@ background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox=
     </main>
 
     <script>
+
+        let templateData = [];
+        let linesData = [];
        // Function to fetch data from an API
         async function fetchData(apiUrl) {
             try {
@@ -177,6 +180,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox=
         // Function to populate a select element with options
         function populateSelect(selectId, data, optionKey, optionValue) {
             const select = document.getElementById(selectId);
+             select.innerHTML = "";
             data.forEach(item => {
                 const option = document.createElement("option");
                 option.value = item[optionKey];
@@ -191,11 +195,23 @@ background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox=
 
         // Fetch data and populate select elements when the page loads
         window.addEventListener("load", async () => {
-            const templateData = await fetchData(templateApiUrl);
-            const linesData = await fetchData(linesApiUrl);
+            linesData = await fetchData(linesApiUrl);
+            populateSelect("lines", linesData, "whatsapp_account", "nombre_whatsapp");
 
-            populateSelect("template", templateData, "id_plantilla", "nombre_plantilla");
-            populateSelect("lines", linesData, "whatsapp_phone_number", "nombre_whatsapp");
+            // Add event listener to lines select element
+            const linesSelect = document.getElementById("lines");
+            linesSelect.addEventListener("change", () => {
+                const selectedAccountId = linesSelect.value;
+
+                // Filter templateData based on the selected account ID
+                const filteredTemplates = templateData.filter(template => template.cuenta === selectedAccountId);
+
+                // Populate the template select element with filtered data
+                populateSelect("template", filteredTemplates, "id_plantilla", "nombre_plantilla");
+            });
+
+            // Load template data initially
+            templateData = await fetchData(templateApiUrl);
         });
     </script>
 
