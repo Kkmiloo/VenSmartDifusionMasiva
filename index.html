@@ -210,6 +210,20 @@ background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox=
                 populateSelect("template", filteredTemplates, "id_plantilla", "nombre_plantilla");
             });
 
+            // Add event listener to template select element
+            const templateSelect = document.getElementById("template");
+            templateSelect.addEventListener("change", () => {
+                const selectedTemplate = templateSelect.options[templateSelect.selectedIndex];
+                const selectedLine = linesSelect.options[linesSelect.selectedIndex];
+                
+                const campaign = "campaign: " + selectedTemplate.text;
+                const valor = " Valor: " + selectedTemplate.value;
+                const texto = " Texto: " + selectedLine.text + " " + selectedLine.value;
+                const result = campaign +valor+ texto;
+
+                console.log(result);
+            });
+
             // Load template data initially
             templateData = await fetchData(templateApiUrl);
         });
