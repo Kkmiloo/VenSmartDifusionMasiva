@@ -8,6 +8,7 @@
       * {
         box-sizing: border-box;
       }
+
       header {
         background: linear-gradient(
           90deg,
@@ -15,6 +16,7 @@
           rgba(255, 255, 255, 0) 50%
         );
       }
+
       .header-bg {
         background-color: #253237;
         background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239db4c0' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
@@ -25,12 +27,14 @@
         border-collapse: collapse;
         width: 100%;
       }
+
       th,
       td {
         border: 1px solid #ddd;
         padding: 8px;
         text-align: left;
       }
+
       th {
         background-color: #f2f2f2;
       }
@@ -45,14 +49,18 @@
 
       /* Limit the height and add a vertical scrollbar */
       .table-container {
-        max-height: 240px; /* Maximum height for the table container */
-        overflow-y: auto; /* Add a vertical scrollbar when necessary */
+        max-height: 240px;
+        /* Maximum height for the table container */
+        overflow-y: auto;
+        /* Add a vertical scrollbar when necessary */
       }
 
       /* Limit the width and add a horizontal scrollbar */
       .table-container table {
-        max-width: 100%; /* Limit the width of the table */
-        overflow-x: auto; /* Add a horizontal scrollbar when necessary */
+        max-width: 100%;
+        /* Limit the width of the table */
+        overflow-x: auto;
+        /* Add a horizontal scrollbar when necessary */
       }
 
       /* Add styles for the image preview container */
@@ -63,12 +71,14 @@
         margin-top: 20px;
         text-align: center;
       }
+
       .image-preview img {
         max-width: 100%;
         max-height: 300px;
       }
     </style>
   </head>
+
   <body>
     <main class="">
       <div class="header-bg">
@@ -159,6 +169,7 @@
                       >Imagen para plantilla</label
                     >
                     <div
+                      id="dropFileImg"
                       class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10"
                     >
                       <div class="text-center">
@@ -174,7 +185,7 @@
                             clip-rule="evenodd"
                           />
                         </svg>
-                        <div id="dropZoneImg" class="mt-4 flex text-sm leading-6 text-gray-600">
+                        <div class="mt-4 flex text-sm leading-6 text-gray-600">
                           <label
                             for="image-file-upload"
                             class="relative cursor-pointer rounded-md font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
@@ -184,7 +195,6 @@
                               id="image-file-upload"
                               name="image-file-upload"
                               type="file"
-                             
                               class="sr-only"
                             />
                           </label>
@@ -194,7 +204,11 @@
                           PNG, JPG, GIF hasta 10MB
                         </p>
                         <!-- Create the image preview container -->
-                        <div class="image-preview" id="imagePreview">
+                        <div
+                          class="image-preview"
+                          id="imagePreview"
+                          style="display: none"
+                        >
                           <img src="" alt="Image Preview" id="previewImage" />
                         </div>
                       </div>
@@ -214,16 +228,13 @@
                     for="csvFileInput"
                     class="relative cursor-pointer rounded-md font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
                   >
+                    <span>Sube un archivo CSV</span>
                     <input
-                      type="file"
                       id="csvFileInput"
                       name="csvFileInput"
-                      accept=".csv"
-                      style="display: none"
+                      type="file"
                       class="sr-only"
                     />
-
-                    <button id="uploadButton">Sube un archivo CSV</button>
                   </label>
                   <span class="pl-1">o arrastra y suelta</span>
                 </div>
