@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            background: linear-gradient(90deg,
+                    #253237 50%,
+                    rgba(255, 255, 255, 0) 50%);
+        }
+
+        .header-bg {
+            background-color: #253237;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239db4c0' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body>
+    <main class="min-h-screen">
+        <div class="header-bg">
+            <header class="sm:p-16 sm:pt-8">
+                <div class="max-w-2xl m-auto">
+                    <div class="flex justify-center w-6/12 pb-4">
+                        <img src="./logo.png" class="h-32" style="" />
+                    </div>
+                    <div class="w-6/12 flex justify-center flex-col text-center">
+                        <h1 class="text-4xl font-semibold leading-7 text-gray-50">
+                            Envío de difusión
+                        </h1>
+
+                        </p>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="bg-[#D6E3DC] px-4 min-h-screen">
+            <div class="max-w-2xl m-auto pt-10">
+                <div class="text-3xl font-semibold text-center flex items-center gap-16 flex-col">
+                    <img src="./successIcon.png" class="w-28">
+                    <h2>Gracias por
+                        enviar *lo que se envio*</h2>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+</body>
+
+</html>

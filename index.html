@@ -80,7 +80,7 @@
   </head>
 
   <body>
-    <main class="">
+    <main class="min-h-screen">
       <div class="header-bg">
         <header class="sm:p-16 sm:pt-8">
           <div class="max-w-2xl m-auto">
@@ -99,7 +99,7 @@
           </div>
         </header>
       </div>
-      <div class="bg-[#D6E3DC] px-4">
+      <div class="bg-[#D6E3DC] px-4 min-h-full">
         <div class="max-w-2xl m-auto">
           <form>
             <div class="space-y-12">
@@ -206,7 +206,7 @@
                         <!-- Create the image preview container -->
                         <div
                           class="image-preview"
-                          id="imagePreview"
+                          id="imageContainer"
                           style="display: none"
                         >
                           <img src="" alt="Image Preview" id="previewImage" />
@@ -222,7 +222,7 @@
                 <p class="text-sm leading-6 text-gray-600">Archivo CSV</p>
                 <div
                   class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10 text-sm leading-6 text-gray-600"
-                  id="dropZoneCsv"
+                  id="dropFileCsv"
                 >
                   <label
                     for="csvFileInput"
@@ -240,15 +240,19 @@
                 </div>
               </div>
               <!-- Table to display CSV data -->
-              <table id="csvTable" class="cssTable">
-                <!-- Table headers will be generated here -->
-              </table>
+
+              <div class="overflow-x-scroll max-h-[20rem]  shadow-md sm:rounded-lg">
+
+                <table id="csvTable" class="cssTable relative w-full text-sm text-left ">
+                  <!-- Table headers will be generated here -->
+                </table>
+              </div>
             </div>
 
             <div class="mt-6 flex items-center justify-end gap-x-6">
               <button
                 type="button"
-                class="text-sm font-semibold leading-6 text-gray-900"
+                class="text-sm font-semibold leading-6 text-gray-900 border- "
               >
                 Cancel
               </button>
