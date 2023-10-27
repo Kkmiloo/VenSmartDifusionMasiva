@@ -4,6 +4,7 @@ const dragImg = document.getElementById("dropFileImg");
 const dragCsv = document.getElementById("dropFileCsv");
 const previewImage = document.getElementById("previewImage");
 const imageContainer = document.getElementById("imageContainer");
+const nameCampaingInput = document.getElementById("campaignName");
 let csvInfo = [];
 
 // Function to fetch data from an API
@@ -218,5 +219,67 @@ function showTable(file) {
       }
     };
     reader.readAsText(file);
+  }
+}
+document.getElementById("campaignName").attributes["required"] = "Es requerido";
+
+function validateForm() {
+  var campaignName = document.getElementById("campaignName").value;
+  var lines = document.getElementById("lines").value;
+  var template = document.getElementById("template").value;
+  var csvFile = document.getElementById("csvFileInput").value;
+
+  var errorMessage = document.getElementById("error-message");
+  errorMessage.textContent = ""; // Clear previous error message
+
+  if (
+    campaignName === "" ||
+    lines === "Seleccione una opcion" ||
+    template === "Seleccione una opcion" ||
+    !csvFile
+  ) {
+    errorMessage.textContent = "All fields are required!";
+    return false; // Prevent form submission
+  }
+
+  return true; // Allow form submission if all fields are filled
+}
+
+nameCampaingInput.addEventListener("focusout", checkField);
+
+function checkField(event) {
+  event.preventDefault();
+  const inputElement = event.target;
+  const inputElementParent = event.target.parentElement;
+
+  if (!inputElement.checkValidity()) {
+    cleanHtlm(inputElementParent, inputElement);
+    changeColorFieldRequired(inputElement, true);
+    addRequiredText(inputElementParent);
+  } else {
+    changeColorFieldRequired(inputElement, false);
+    cleanHtlm(inputElementParent, inputElement);
+  }
+}
+
+function addRequiredText(element) {
+  const span = document.createElement("span");
+  span.innerHTML = "Campo es requerido";
+  console.log(span);
+  span.classList.add("text-sm", "text-red-500");
+  element.appendChild(span);
+}
+
+function cleanHtlm(element, firtsElement) {
+  while (element.lastChild && element.lastChild !== firtsElement) {
+    element.removeChild(element.lastChild);
+  }
+}
+
+function changeColorFieldRequired(element, isEmpty) {
+  if (isEmpty) {
+    element.classList.add("ring-2", "ring-red-600");
+  } else {
+    element.classList.remove("ring-2", "ring-red-600");
   }
 }

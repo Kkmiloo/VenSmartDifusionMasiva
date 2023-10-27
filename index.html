@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
 
-      header {
-        background: linear-gradient(
-          90deg,
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    header {
+      background: linear-gradient(90deg,
           #253237 50%,
-          rgba(255, 255, 255, 0) 50%
-        );
-      }
+          rgba(255, 255, 255, 0) 50%);
+    }
 
-      .header-bg {
-        background-color: #253237;
-        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239db4c0' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
-      }
+    .header-bg {
+      background-color: #253237;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239db4c0' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    }
 
-      /* Style for the table */
-      table {
-        border-collapse: collapse;
-        width: 100%;
-      }
+    /* Style for the table */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
 
-      th,
-      td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-      }
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
 
-      th {
-        background-color: #f2f2f2;
-      }
+    th {
+      background-color: #f2f2f2;
+    }
 
-      /* Style for the drop zone 
+    /* Style for the drop zone 
       .drop-zone {
         border: 2px dashed #ccc;
         padding: 20px;
@@ -47,227 +46,168 @@
         cursor: pointer;
       }*/
 
-      /* Limit the height and add a vertical scrollbar */
-      .table-container {
-        max-height: 240px;
-        /* Maximum height for the table container */
-        overflow-y: auto;
-        /* Add a vertical scrollbar when necessary */
-      }
+    /* Limit the height and add a vertical scrollbar */
+    .table-container {
+      max-height: 240px;
+      /* Maximum height for the table container */
+      overflow-y: auto;
+      /* Add a vertical scrollbar when necessary */
+    }
 
-      /* Limit the width and add a horizontal scrollbar */
-      .table-container table {
-        max-width: 100%;
-        /* Limit the width of the table */
-        overflow-x: auto;
-        /* Add a horizontal scrollbar when necessary */
-      }
+    /* Limit the width and add a horizontal scrollbar */
+    .table-container table {
+      max-width: 100%;
+      /* Limit the width of the table */
+      overflow-x: auto;
+      /* Add a horizontal scrollbar when necessary */
+    }
 
-      /* Add styles for the image preview container */
-      .image-preview {
-        width: 300px;
-        height: auto;
-        border: 1px solid #ccc;
-        margin-top: 20px;
-        text-align: center;
-      }
+    /* Add styles for the image preview container */
+    .image-preview {
+      width: 300px;
+      height: auto;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+      text-align: center;
+    }
 
-      .image-preview img {
-        max-width: 100%;
-        max-height: 300px;
-      }
-    </style>
-  </head>
+    .image-preview img {
+      max-width: 100%;
+      max-height: 300px;
+    }
+  </style>
+</head>
 
-  <body>
-    <main class="min-h-screen">
-      <div class="header-bg">
-        <header class="sm:p-16 sm:pt-8">
-          <div class="max-w-2xl m-auto">
-            <div class="flex justify-center w-6/12 pb-4">
-              <img src="./logo.png" class="h-32" style="" />
-            </div>
-            <div class="w-6/12 flex justify-center flex-col text-center">
-              <h1 class="text-4xl font-semibold leading-7 text-gray-50">
-                Envío de difusión
-              </h1>
-              <p class="mt-5 text-sm leading-6 font-medium text-gray-200 flex">
-                debe contar con el archivo csv y la imagen de la plantilla en
-                caso de requerirla.
-              </p>
-            </div>
-          </div>
-        </header>
-      </div>
-      <div class="bg-[#D6E3DC] px-4 min-h-full">
+<body>
+  <main class="min-h-screen">
+    <div class="header-bg">
+      <header class="sm:p-16 sm:pt-8">
         <div class="max-w-2xl m-auto">
-          <form>
-            <div class="space-y-12">
-              <div class="border-b border-gray-900/10 pb-12">
-                <div
-                  class="pt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6"
-                >
-                  <div class="sm:col-span-full">
-                    <label
-                      for="first-name"
-                      class="block text-sm font-medium leading-6 text-gray-900"
-                      >Nombre de la campaña</label
-                    >
-                    <div class="mt-2">
-                      <input
-                        type="text"
-                        name="first-name"
-                        id="first-name"
-                        autocomplete="given-name"
-                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      />
-                    </div>
+          <div class="flex justify-center w-6/12 pb-4">
+            <img src="./logo.png" class="h-32" style="" />
+          </div>
+          <div class="w-6/12 flex justify-center flex-col text-center">
+            <h1 class="text-4xl font-semibold leading-7 text-gray-50">
+              Envío de difusión
+            </h1>
+            <p class="mt-5 text-sm leading-6 font-medium text-gray-200 flex">
+              *Debe contar con el archivo csv y la imagen de la plantilla en
+              caso de requerirla.
+            </p>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="bg-[#D6E3DC] px-4 min-h-full">
+      <div class="max-w-2xl m-auto">
+        <form onsubmit="return validateForm()">
+          <div class="space-y-12">
+            <div class="border-b border-gray-900/10 pb-12">
+              <div class="pt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                <div class="sm:col-span-full">
+                  <label for="campaignName" class="block text-sm font-medium leading-6 text-gray-900">Nombre de la
+                    campaña</label>
+                  <div class="mt-2">
+                    <input type="text" name="campaignName" id="campaignName" required autocomplete="given-name"
+                      class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      required />
                   </div>
+                </div>
 
-                  <div class="sm:col-span-3">
-                    <label
-                      for="lines"
-                      class="block text-sm font-medium leading-6 text-gray-900"
-                      >Líneas disponibles</label
-                    >
-                    <div class="mt-2">
-                      <select
-                        id="lines"
-                        name="lines"
-                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                      ></select>
-                    </div>
+                <div class="sm:col-span-3">
+                  <label for="lines" class="block text-sm font-medium leading-6 text-gray-900">Líneas
+                    disponibles</label>
+                  <div class="mt-2">
+                    <select id="lines" name="lines"
+                      class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"></select>
                   </div>
-                  <div class="sm:col-span-3">
-                    <label
-                      for="template"
-                      class="block text-sm font-medium leading-6 text-gray-900"
-                      >Plantillas disponibles</label
-                    >
-                    <div class="mt-2">
-                      <select
-                        id="template"
-                        name="template"
-                        autocomplete="template-name"
-                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                      >
-                        <option value="Seleccione una opcion">
-                          Seleccione una opcion
-                        </option>
-                      </select>
-                    </div>
+                </div>
+                <div class="sm:col-span-3">
+                  <label for="template" class="block text-sm font-medium leading-6 text-gray-900">Plantillas
+                    disponibles</label>
+                  <div class="mt-2">
+                    <select id="template" name="template" autocomplete="template-name"
+                      class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                      <option value="Seleccione una opcion">
+                        Seleccione una opcion
+                      </option>
+                    </select>
                   </div>
+                </div>
 
-                  <div
-                    id="imageComponent"
-                    class="col-span-full"
-                    style="display: none"
-                  >
-                    <label
-                      for="cover-photo"
-                      class="block text-sm font-medium leading-6 text-gray-900"
-                      >Imagen para plantilla</label
-                    >
-                    <div
-                      id="dropFileImg"
-                      class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10"
-                    >
-                      <div class="text-center">
-                        <svg
-                          class="mx-auto h-12 w-12 text-gray-300"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <div class="mt-4 flex text-sm leading-6 text-gray-600">
-                          <label
-                            for="image-file-upload"
-                            class="relative cursor-pointer rounded-md font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
-                          >
-                            <span>Sube una imagen</span>
-                            <input
-                              id="image-file-upload"
-                              name="image-file-upload"
-                              type="file"
-                              class="sr-only"
-                            />
-                          </label>
-                          <p class="pl-1">o arrastra y suelta</p>
-                        </div>
-                        <p class="text-xs leading-5 text-gray-600">
-                          PNG, JPG, GIF hasta 10MB
-                        </p>
-                        <!-- Create the image preview container -->
-                        <div
-                          class="image-preview"
-                          id="imageContainer"
-                          style="display: none"
-                        >
-                          <img src="" alt="Image Preview" id="previewImage" />
-                        </div>
+                <div id="imageComponent" class="col-span-full" style="display: none">
+                  <label for="cover-photo" class="block text-sm font-medium leading-6 text-gray-900">Imagen para
+                    plantilla</label>
+                  <div id="dropFileImg"
+                    class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
+                    <div class="text-center">
+                      <svg class="mx-auto h-12 w-12 text-gray-300" viewBox="0 0 24 24" fill="currentColor"
+                        aria-hidden="true">
+                        <path fill-rule="evenodd"
+                          d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      <div class="mt-4 flex text-sm leading-6 text-gray-600">
+                        <label for="image-file-upload"
+                          class="relative cursor-pointer rounded-md font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
+                          <span>Sube una imagen</span>
+                          <input id="image-file-upload" name="image-file-upload" type="file" class="sr-only"
+                            accept=".png, .jpg, .jpeg" max-size="10000" />
+                        </label>
+                        <p class="pl-1">o arrastra y suelta</p>
+                      </div>
+                      <p class="text-xs leading-5 text-gray-600">
+                        PNG, JPG, GIF hasta 10MB
+                      </p>
+                      <!-- Create the image preview container -->
+                      <div class="image-preview" id="imageContainer" style="display: none">
+                        <img src="" alt="Image Preview" id="previewImage" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <div class="col-span-full">
-                <!-- Drop zone for drag-and-drop -->
-                <p class="text-sm leading-6 text-gray-600">Archivo CSV</p>
-                <div
-                  class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10 text-sm leading-6 text-gray-600"
-                  id="dropFileCsv"
-                >
-                  <label
-                    for="csvFileInput"
-                    class="relative cursor-pointer rounded-md font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
-                  >
-                    <span>Sube un archivo CSV</span>
-                    <input
-                      id="csvFileInput"
-                      name="csvFileInput"
-                      type="file"
-                      class="sr-only"
-                    />
-                  </label>
-                  <span class="pl-1">o arrastra y suelta</span>
-                </div>
-              </div>
-              <!-- Table to display CSV data -->
-
-              <div class="overflow-x-scroll max-h-[20rem]  shadow-md sm:rounded-lg">
-
-                <table id="csvTable" class="cssTable relative w-full text-sm text-left ">
-                  <!-- Table headers will be generated here -->
-                </table>
-              </div>
             </div>
 
-            <div class="mt-6 flex items-center justify-end gap-x-6">
-              <button
-                type="button"
-                class="text-sm font-semibold leading-6 text-gray-900 border- "
-              >
-                Cancel
-              </button>
-              <button
-                type="submit"
-                class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Enviar
-              </button>
+            <div class="col-span-full">
+              <!-- Drop zone for drag-and-drop -->
+              <p class="text-sm leading-6 text-gray-600">Archivo CSV</p>
+              <div
+                class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10 text-sm leading-6 text-gray-600"
+                id="dropFileCsv">
+                <label for="csvFileInput"
+                  class="relative cursor-pointer rounded-md font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
+                  <span>Sube un archivo CSV</span>
+                  <input id="csvFileInput" name="csvFileInput" type="file" class="sr-only" accept=".csv" />
+                </label>
+                <span class="pl-1">o arrastra y suelta</span>
+              </div>
             </div>
-          </form>
-        </div>
+            <!-- Table to display CSV data -->
+
+            <div class="overflow-x-scroll max-h-[20rem]  shadow-md sm:rounded-lg">
+
+              <table id="csvTable" class="cssTable relative w-full text-sm text-left ">
+                <!-- Table headers will be generated here -->
+              </table>
+            </div>
+          </div>
+          <div class="mt-6 flex items-center justify-end gap-x-6">
+            <button type="button" class="text-sm font-semibold leading-6 text-gray-900 border- ">
+              Cancel
+            </button>
+            <button type="submit"
+              class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              Enviar
+            </button>
+          </div>
+          <div id="error-message" class="text-red-600 text-sm mt-2"></div>
+        </form>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <script src="./index.js"></script>
-  </body>
+  <script src="./index.js"></script>
+</body>
+
 </html>
