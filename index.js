@@ -1,124 +1,167 @@
+import {
+  formatText,
+  fetchData,
+  populateSelect,
+  createParagraph,
+  cleanHtlm,
+  changeColorFieldRequired,
+} from './utils.js';
+
+// Variables globales
 let templateData = [];
 let linesData = [];
+
+// Elementos del DOM
+const linesSelect = document.getElementById('lines');
+const templateSelect = document.getElementById('template');
 const dragImg = document.getElementById('dropFileImg');
 const dragCsv = document.getElementById('dropFileCsv');
 const previewImage = document.getElementById('previewImage');
 const imageContainer = document.getElementById('imageContainer');
+const imageComponent = document.getElementById('imageComponent');
 const nameCampaingInput = document.getElementById('campaignName');
-let csvInfo = [];
-/*************************************/
+
 // API URLs
 const templateApiUrl = 'templates.json';
 const linesApiUrl = 'phones.json';
-// Fetch data and populate select elements when the page loads
-window.addEventListener('load', async () => {
+
+// Función para inicializar la aplicación
+async function initializeApp() {
   linesData = await fetchData(linesApiUrl);
-  populateSelect('lines', linesData, 'whatsapp_account', 'nombre_whatsapp');
-  // Load template data initially
   templateData = await fetchData(templateApiUrl);
-  // Add event listener to lines select element
-  const linesSelect = document.getElementById('lines');
-  linesSelect.addEventListener('change', () => {
-    const selectedAccountId = linesSelect.value;
+  populateSelect('lines', linesData, 'whatsapp_account', 'nombre_whatsapp');
+  linesSelect.addEventListener('change', onChageLines);
+  templateSelect.addEventListener('change', onChangeTemplate);
+}
 
-    // Filter templateData based on the selected account ID
-    const filteredTemplates = templateData.filter(
-      (template) => template.cuenta === selectedAccountId
-    );
-    document.getElementById('imageComponent').style.display = 'none';
-    // Populate the template select element with filtered data
-    populateSelect(
-      'template',
-      filteredTemplates,
-      'id_plantilla',
-      'nombre_plantilla',
-      true
-    );
-  });
-
-  // Add event listener to template select element
-  const templateSelect = document.getElementById('template');
-  templateSelect.addEventListener('change', () => {
-    const selectedTemplate =
-      templateSelect.options[templateSelect.selectedIndex];
-    const selectedLine = linesSelect.options[linesSelect.selectedIndex];
-    console.log(selectedTemplate.value);
-
-    const item = templateData.find(
-      (i) => i.id_plantilla == selectedTemplate.value
-    );
-    if (item.componentes[0]?.header?.type === 'IMAGE') {
-      document.getElementById('imageComponent').style.display = 'block'; // Show the component
-    } else {
-      document.getElementById('imageComponent').style.display = 'none'; // Hide the component
-    }
-    const campaign = 'campaign: ' + selectedTemplate.text;
-    const valor = ' Valor: ' + selectedTemplate.value;
-    const texto = ' Texto: ' + selectedLine.text + ' ' + selectedLine.value;
-    const result = campaign + valor + texto;
-
-    populateWhatsappChat(item);
-  });
-});
-
-// Function to handle CSV file upload and display
-document.getElementById('csvFileInput').addEventListener('change', (e) => {
-  showTable(e.target.files[0]);
-});
-document.getElementById('image-file-upload').addEventListener('change', (e) => {
-  uploadFile(e.target.files);
-});
-
-dragImg.addEventListener('drop', dropFile, false);
-dragImg.addEventListener('dragover', prevent, false);
-
+// Event listeners
+window.addEventListener('load', initializeApp);
+document
+  .getElementById('csvFileInput')
+  .addEventListener('change', handleCsvFileChange);
+document
+  .getElementById('image-file-upload')
+  .addEventListener('change', handleImageFileChange);
+dragImg.addEventListener('drop', handleImageDrop, false);
+dragImg.addEventListener('dragover', handleDragOver, false);
 dragImg.addEventListener('dragenter', changeCursor);
 dragImg.addEventListener('dragleave', changeCursor);
-
 dragCsv.addEventListener('dragenter', changeCursor);
 dragCsv.addEventListener('dragleave', changeCursor);
-dragCsv.addEventListener('dragover', prevent, false);
-dragCsv.addEventListener('drop', dropFileCsv, false);
+dragCsv.addEventListener('dragover', handleDragOver, false);
+dragCsv.addEventListener('drop', handleCsvFileDrop, false);
 nameCampaingInput.addEventListener('focusout', checkField);
 
+function onChageLines() {
+  const selectedAccountId = linesSelect.value;
+  const filteredTemplates = templateData.filter(
+    (template) => template.cuenta === selectedAccountId
+  );
+  populateSelect(
+    'template',
+    filteredTemplates,
+    'id_plantilla',
+    'nombre_plantilla',
+    true
+  );
+}
+
+function onChangeTemplate() {
+  const selectedTemplate = templateSelect.options[templateSelect.selectedIndex];
+  const selectedLine = linesSelect.options[linesSelect.selectedIndex];
+  const item = templateData.find(
+    (i) => i.id_plantilla == selectedTemplate.value
+  );
+
+  const campaign = 'campaign: ' + selectedTemplate.text;
+  const valor = ' Valor: ' + selectedTemplate.value;
+  const texto = ' Texto: ' + selectedLine.text + ' ' + selectedLine.value;
+  const result = campaign + valor + texto;
+  resetImageInput();
+  console.log(result);
+  populateWhatsappChat(item);
+}
+
 function populateWhatsappChat(item) {
+  previewImage.src = '';
+  const content = document.getElementById('wsContent');
+  cleanHtlm(content, false);
+
   const { botones } = item;
   const { header, body } = item.componentes[0];
-  const chat = document.getElementById('wsChat');
-  const content = document.getElementById('wsContent');
-  const pHeader = document.createElement('p');
-  const pBody = document.createElement('p');
-  const pTime = document.createElement('p');
-  const aBoton = document.createElement('button');
 
-  cleanHtlm(content, false);
-  pTime.classList.add('text-right', 'text-xs', 'text-grey-dark', 'mt-1');
-  pHeader.classList.add('text-sm', 'mt-1');
-  pBody.classList.add('text-sm', 'mt-1');
+  const pHeader = createParagraph(['text-sm', 'mt-1']);
+  const pBody = createParagraph(['text-sm', 'mt-1']);
+  const pTime = createParagraph([
+    'text-right',
+    'text-xs',
+    'text-grey-dark',
+    'mt-1',
+  ]);
+  const aBoton = createParagraph([
+    'w-full',
+    'text-center',
+    'mt-2',
+    'border-t',
+    'font-bold',
+    'text-sky-500',
+    'p-2',
+    'border-gray-400',
+    'hover:cursor-pointer',
+  ]);
 
+  handleHeader(header, pHeader, content);
+  handleImageComponent(header, body);
+  handleBody(body, pBody, pTime, content);
+  handleBotones(botones, aBoton, content);
+}
+
+function handleHeader(header, pHeader, content) {
   if (header) {
-    const { type } = header;
-
-    if (type === 'TEXT') {
-      pHeader.innerText = header.text;
+    const { type, text } = header;
+    if (text) {
+      pHeader.innerHTML = formatText(text);
       content.appendChild(pHeader);
     }
+
+    if (type === 'IMAGE') {
+      showImageComponent();
+      if (!isImageValid()) {
+        hideImageComponent();
+      }
+    } else {
+      hideImageComponent();
+    }
+  } else {
+    hideImageComponent();
   }
-  pBody.innerText = body;
-  pTime.innerText = '9:45 pm';
+}
+
+function handleImageComponent(header, body) {
+  if (header && header.type === 'IMAGE') {
+    showImageComponent();
+    if (!isImageValid()) {
+      imageContainer.style.display = 'none';
+    }
+  } else if (body && body.type === 'IMAGE') {
+    showImageComponent();
+    if (!isImageValid()) {
+      imageContainer.style.display = 'none';
+    }
+  } else {
+    hideImageComponent();
+  }
+}
+
+function handleBody(body, pBody, pTime, content) {
+  pBody.innerHTML = formatText(body);
+  pTime.innerHTML = '9:45 pm';
   content.appendChild(pBody);
   content.appendChild(pTime);
+}
+
+function handleBotones(botones, aBoton, content) {
   if (botones) {
-    aBoton.classList.add(
-      'w-full',
-      'text-center',
-      'mt-2',
-      'border-t',
-      'font-bold',
-      'text-sky-500',
-      'p-2',
-      'border-gray-400'
-    );
     aBoton.innerText = botones;
     content.appendChild(aBoton);
   }
@@ -129,89 +172,92 @@ function changeCursor(e) {
   e.currentTarget.classList.toggle('border-2');
 }
 
-function prevent(e) {
+function showImageComponent() {
+  imageComponent.style.display = 'block';
+  imageContainer.style.display = 'block';
+}
+
+function hideImageComponent() {
+  imageContainer.style.display = 'none';
+  imageComponent.style.display = 'none';
+}
+
+function isImageValid() {
+  return previewImage.complete && previewImage.naturalWidth > 0;
+}
+
+function handleDragOver(e) {
   e.preventDefault();
 }
 
-function dropFile(e) {
+function handleImageDrop(e) {
   e.preventDefault();
   e.stopPropagation();
-
   let dt = e.dataTransfer;
   let files = dt.files;
   uploadFile(files);
 }
 
-function dropFileCsv(e) {
+function handleCsvFileDrop(e) {
   e.preventDefault();
   e.stopPropagation();
-
   let dt = e.dataTransfer;
   let files = dt.files;
   showTable(files[0]);
 }
-function handleFiles(files) {
-  [...files].forEach(uploadFile);
+
+function handleCsvFileChange(e) {
+  showTable(e.target.files[0]);
 }
 
-/* ************************************** */
-/* Function for image preview */
+function handleImageFileChange(e) {
+  uploadFile(e.target.files);
+}
+
 function uploadFile(files) {
-  console.log('Upload');
   // Check if a file is selected
   if (files && files[0]) {
     const reader = new FileReader();
-
     reader.onload = function (e) {
-      // Set the source of the preview image to the selected file's data URL
       previewImage.src = e.target.result;
-
-      // Show the image preview container
-      imageContainer.style.display = 'block';
+      showImageComponent();
     };
-
-    // Read the selected file as a data URL
     reader.readAsDataURL(files[0]);
   } else {
-    // Hide the image preview container if no file is selected
-    imageContainer.style.display = 'none';
+    hideImageComponent();
   }
 }
-// Function to trigger file input when the button is clicked
+
+function resetImageInput() {
+  const imageFileInput = document.getElementById('image-file-upload');
+  imageFileInput.value = ''; // Restablece el valor del input a vacío
+}
 
 function showTable(file) {
   if (file) {
     const reader = new FileReader();
     reader.onload = function (e) {
-      console.log('el result', e.target.result);
       const contents = e.target.result;
       const lines = contents.split('\n');
       const table = document.getElementById('csvTable');
       table.innerHTML = ''; // Clear previous table data
 
       if (lines.length > 0) {
-        // Split the first line (headers) by comma to get column names
         const headers = lines[0].split(/[,;]/);
-
-        // Create table header row
         const headerRow = document.createElement('tr');
         headerRow.classList.add('text-xs', 'text-gray-700', 'uppercase');
         headerRow.style = 'position: sticky ; top:0';
         for (const header of headers) {
           const th = document.createElement('th');
-
           th.classList.add('p-3');
           th.textContent = header;
-
           headerRow.appendChild(th);
         }
         table.appendChild(headerRow);
 
-        // Create table rows for data
         for (let i = 1; i < lines.length; i++) {
           const rowData = lines[i].split(/[,;]/);
           const row = document.createElement('tr');
-
           row.classList.add('even:bg-gray-300', 'odd:bg-white');
           for (const data of rowData) {
             const td = document.createElement('td');
@@ -231,9 +277,8 @@ function validateForm() {
   var lines = document.getElementById('lines').value;
   var template = document.getElementById('template').value;
   var csvFile = document.getElementById('csvFileInput').value;
-
   var errorMessage = document.getElementById('error-message');
-  errorMessage.textContent = ''; // Clear previous error message
+  errorMessage.textContent = '';
 
   if (
     campaignName === '' ||
@@ -242,17 +287,16 @@ function validateForm() {
     !csvFile
   ) {
     errorMessage.textContent = 'All fields are required!';
-    return false; // Prevent form submission
+    return false;
   }
 
-  return true; // Allow form submission if all fields are filled
+  return true;
 }
 
 function checkField(event) {
   event.preventDefault();
   const inputElement = event.target;
   const inputElementParent = event.target.parentElement;
-
   if (!inputElement.checkValidity()) {
     cleanHtlm(inputElementParent, inputElement);
     changeColorFieldRequired(inputElement, true);
@@ -266,55 +310,6 @@ function checkField(event) {
 function addRequiredText(element) {
   const span = document.createElement('span');
   span.innerHTML = 'Campo requerido';
-  console.log(span);
   span.classList.add('text-sm', 'text-red-500');
   element.appendChild(span);
-}
-
-function cleanHtlm(element, firtsElement) {
-  while (element.lastChild && element.lastChild !== firtsElement) {
-    element.removeChild(element.lastChild);
-  }
-}
-
-function changeColorFieldRequired(element, isEmpty) {
-  if (isEmpty) {
-    element.classList.add('ring-2', 'ring-red-600');
-  } else {
-    element.classList.remove('ring-2', 'ring-red-600');
-  }
-}
-
-// Function to fetch data from an API
-async function fetchData(apiUrl) {
-  try {
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error('Error fetching data: ', error);
-  }
-}
-
-// Function to populate a select element with options
-function populateSelect(
-  selectId,
-  data,
-  optionKey,
-  optionValue,
-  defaultValue = false
-) {
-  const select = document.getElementById(selectId);
-  select.innerHTML = '';
-  if (defaultValue) {
-    const option = document.createElement('option');
-    option.text = 'Selecciona una opcion';
-    select.appendChild(option);
-  }
-  data.forEach((item) => {
-    const option = document.createElement('option');
-    option.value = item[optionKey];
-    option.text = item[optionValue];
-    select.appendChild(option);
-  });
 }
