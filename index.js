@@ -12,6 +12,7 @@ let templateData = [];
 let linesData = [];
 
 // Elementos del DOM
+const form = document.getElementById('my-form');
 const linesSelect = document.getElementById('lines');
 const templateSelect = document.getElementById('template');
 const dragImg = document.getElementById('dropFileImg');
@@ -40,7 +41,7 @@ document
   .getElementById('csvFileInput')
   .addEventListener('change', handleCsvFileChange);
 document
-  .getElementById('image-file-upload')
+  .getElementById('imageFile')
   .addEventListener('change', handleImageFileChange);
 dragImg.addEventListener('drop', handleImageDrop, false);
 dragImg.addEventListener('dragover', handleDragOver, false);
@@ -51,6 +52,7 @@ dragCsv.addEventListener('dragleave', changeCursor);
 dragCsv.addEventListener('dragover', handleDragOver, false);
 dragCsv.addEventListener('drop', handleCsvFileDrop, false);
 nameCampaingInput.addEventListener('focusout', checkField);
+form.addEventListener('submit', onFormSubmit);
 
 function onChageLines() {
   const selectedAccountId = linesSelect.value;
@@ -229,7 +231,7 @@ function uploadFile(files) {
 }
 
 function resetImageInput() {
-  const imageFileInput = document.getElementById('image-file-upload');
+  const imageFileInput = document.getElementById('imageFile');
   imageFileInput.value = ''; // Restablece el valor del input a vacío
 }
 
@@ -272,27 +274,6 @@ function showTable(file) {
   }
 }
 
-function validateForm() {
-  var campaignName = document.getElementById('campaignName').value;
-  var lines = document.getElementById('lines').value;
-  var template = document.getElementById('template').value;
-  var csvFile = document.getElementById('csvFileInput').value;
-  var errorMessage = document.getElementById('error-message');
-  errorMessage.textContent = '';
-
-  if (
-    campaignName === '' ||
-    lines === 'Seleccione una opcion' ||
-    template === 'Seleccione una opcion' ||
-    !csvFile
-  ) {
-    errorMessage.textContent = 'All fields are required!';
-    return false;
-  }
-
-  return true;
-}
-
 function checkField(event) {
   event.preventDefault();
   const inputElement = event.target;
@@ -312,4 +293,33 @@ function addRequiredText(element) {
   span.innerHTML = 'Campo requerido';
   span.classList.add('text-sm', 'text-red-500');
   element.appendChild(span);
+}
+
+async function postFetch(url, data) {
+  const rawResponse = await fetch(url, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+  const content = await rawResponse.json();
+
+  return content;
+}
+
+async function onFormSubmit(event) {
+  event.preventDefault();
+  const data = new FormData(event.target);
+  const dataObject = Object.fromEntries(data.entries());
+
+  const requestData = {
+    campa: dataObject.campaignName,
+    linea: dataObject.lines,
+    plantilla: dataObject.template,
+    idImage: '',
+  };
+
+  //postFetch();
 }
