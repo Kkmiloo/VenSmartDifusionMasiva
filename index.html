@@ -30,7 +30,7 @@
             Debe contar con el archivo csv y la imagen de la plantilla en caso
             de requerirla.
           </p>
-          <form onsubmit="return validateForm()">
+          <form id="my-form" enctype="multipart/form-data">
             <div class="space-y-12">
               <div class="border-b border-gray-900/10 pb-12">
                 <div
@@ -149,13 +149,13 @@
                         class="mt-4 flex flex-col text-sm leading-6 text-gray-600"
                       >
                         <label
-                          for="image-file-upload"
+                          for="imageFile"
                           class="relative cursor-pointer rounded-md font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
                         >
                           <span>Sube una imagen</span>
                           <input
-                            id="image-file-upload"
-                            name="image-file-upload"
+                            id="imageFile"
+                            name="imageFile"
                             type="file"
                             class="sr-only"
                             accept=".png, .jpg, .jpeg"
